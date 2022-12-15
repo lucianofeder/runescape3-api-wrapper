@@ -1,0 +1,1 @@
+from .user_seasonal_hiscore import UserSeasonalHiscore
