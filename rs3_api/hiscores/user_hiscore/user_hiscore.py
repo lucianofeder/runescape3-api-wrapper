@@ -17,7 +17,7 @@ class UserHiscore:
     minigames: Dict[Minigames, Minigame] = field(init=False)
 
     __api_data: str = field(init=False, repr=False)
-    __seasonal_hiscore: UserSeasonalHiscore = field(default_factory=lambda: UserSeasonalHiscore(), repr=False) 
+    __seasonal_hiscore: UserSeasonalHiscore = field(default_factory=lambda: UserSeasonalHiscore(), repr=False)
 
     def __post_init__(self):
         if not self.account_type:
