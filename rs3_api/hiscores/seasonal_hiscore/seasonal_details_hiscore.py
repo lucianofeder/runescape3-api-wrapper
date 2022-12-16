@@ -12,7 +12,6 @@ class SeasonalDetailsHiscore:
     __api_data: dict = field(default_factory=dict, repr=False)
     __last_call: str = field(default='', repr=False)
 
-
     @property
     def current(self) -> List[SeasonalEvent]:
         return self.__get_formatted_data()
@@ -35,7 +34,7 @@ class SeasonalDetailsHiscore:
             status=data.get('status'),
             type=data.get('type'),
             id=data.get('id')
-        ) for data in res] 
+        ) for data in res]
 
     def __get_data(self, archived: bool = False) -> dict:
         current_call = f'archived: {archived}'
@@ -45,4 +44,3 @@ class SeasonalDetailsHiscore:
         res = requests.get(f'{BASE_URL}/m=temp-hiscores/getHiscoreDetails.json{is_archived}')
         self.__api_data = res.json()
         return self.__api_data
-        
