@@ -1,0 +1,1 @@
+from .clan_members_hiscore import ClanMembersHiscore

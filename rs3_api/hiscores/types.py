@@ -48,3 +48,11 @@ class SeasonalEvent:
     status: str
     type: str
     id: int
+
+
+@dataclass
+class ClanMember:
+    name: str
+    clan_rank: str
+    total_xp: int
+    kills: int
