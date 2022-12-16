@@ -26,9 +26,12 @@ class UserHiscore:
             user = self.__get_user(self.account_type)
         if not user:
             raise UserNotFoundException(self.username)
+        self.__process()
 
-    @property
-    def data(self):
+    def get_season(self, archived: bool = False) -> List[UserSeason]:
+        return self.__seasonal_hiscore.get_season(self.username, archived)
+
+    def __process(self):
         api_data = list(map(
             lambda data: data.split(','),
             self.__api_data.split('\n')
@@ -36,9 +39,6 @@ class UserHiscore:
         self.skills = self.__get_skills(api_data),
         self.minigames = self.__get_minigames(api_data)
         return self
-
-    def get_season(self, archived: bool = False) -> List[UserSeason]:
-        return self.__seasonal_hiscore.get_season(self.username, archived)
 
     def __get_user(self, account_type: AccountTypes) -> str:
         if getattr(self, '__api_data', None):
