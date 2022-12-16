@@ -1,1 +1,2 @@
+from .seasonal_details_hiscore import SeasonalDetailsHiscore
 from .user_seasonal_hiscore import UserSeasonalHiscore

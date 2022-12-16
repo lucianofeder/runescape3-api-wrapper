@@ -17,7 +17,7 @@ class UserHiscore:
     minigames: Dict[Minigames, Minigame] = field(init=False)
 
     __api_data: str = field(init=False, repr=False)
-    __seasonal_hiscore: UserSeasonalHiscore = field(default_factory=lambda: UserSeasonalHiscore(), repr=False) 
+    __seasonal_hiscore: UserSeasonalHiscore = field(default_factory=lambda: UserSeasonalHiscore(), repr=False)
 
     def __post_init__(self):
         if not self.account_type:
@@ -56,14 +56,13 @@ class UserHiscore:
             self.account_type = account_type
             return self.__api_data
         return ''
-    
+
     def __get_without_account_type(self) -> Optional[str]:
         for type in reversed(AccountTypes):
             user = self.__get_user(type)
             if user:
                 return user
         return None
-
 
     def __get_minigames(self, api_data: List[List[str]]) -> Dict[Minigames, Minigame]:
         starting_point = len(Skills)
@@ -76,7 +75,6 @@ class UserHiscore:
                 total=int(api_data[pos][1])
             )
         return data
-
 
     def __get_skills(self, api_data: List[List[str]]) -> Dict[Skills, Skill]:
         data = {}
