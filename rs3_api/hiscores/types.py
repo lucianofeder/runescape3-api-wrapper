@@ -33,3 +33,18 @@ class UserSeason:
     score_formatted: int
     score_raw: int
     hiscore_id: int
+
+
+@dataclass
+class SeasonalEvent:
+    start_date: str
+    end_date: Optional[str]
+    days_running: int
+    months_running: int
+    recurrence: int
+    title: str
+    name: str
+    description: str
+    status: str
+    type: str
+    id: int
