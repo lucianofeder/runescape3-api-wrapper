@@ -1,0 +1,27 @@
+[project]
+name = "rs3_api"
+version = "0.1.0"
+description = "A wrapper for Runescape 3 API to make it easier to work."
+authors = [
+    {name = "Luciano Feder", email="lucianoo.feder@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["runescape3", "rs3", "runescape", "api"]
+classifiers = [
+    "Topic :: Software Development",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "requests"
+]
+
+[project.urls]
+homepage = "https://github.com/lucianofeder/runescape3-api-wrapper"
+documentation = "https://github.com/lucianofeder/runescape3-api-wrapper"
+repository = "https://github.com/lucianofeder/runescape3-api-wrapper"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
