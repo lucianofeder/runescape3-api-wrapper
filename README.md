@@ -10,11 +10,6 @@ from rs3_api.hiscores.hiscore import Hiscore
 
 hiscore = Hiscore()
 
-
-from rs3_api.hiscores.hiscore import Hiscore
-
-h = Hiscore()
-
 ## User hiscores
 user = h.user('zezima')
 print(user)
