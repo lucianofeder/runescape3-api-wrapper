@@ -2,6 +2,12 @@
 
 ## Under construction
 
+## Istalling
+
+```
+pip install rs3_api
+```
+
 
 ## Hiscores
 
