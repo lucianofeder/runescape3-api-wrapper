@@ -33,7 +33,8 @@ class Skills(str, Enum):
     DUNGEONEERING = "dungeoneering",
     DIVINATION = "divination",
     INVENTION = "invention",
-    ARCHEOLOGY = "archeology"
+    ARCHEOLOGY = "archeology",
+    NECROMANCY = "necromancy"
 
 
 @unique
